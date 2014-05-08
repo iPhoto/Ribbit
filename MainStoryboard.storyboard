@@ -160,11 +160,37 @@
                     </navigationItem>
                     <connections>
                         <segue destination="ZcG-9H-7ga" kind="push" identifier="showLogin" id="cIt-RU-4Mp"/>
+                        <segue destination="PR4-5x-UkO" kind="push" identifier="showImage" id="gla-m5-zFd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmK-gK-6x4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="-555"/>
+            <point key="canvasLocation" x="583" y="-561"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="FMH-z5-cWf">
+            <objects>
+                <viewController id="PR4-5x-UkO" customClass="NImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qit-7f-NyI"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Ec-kv-mWl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TmZ-3X-XZw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kw4-C8-PAP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wyi-gd-t5i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbI-t1-hr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="-1297"/>
         </scene>
         <!--Login View Controller - Ribbit-->
         <scene sceneID="N45-4d-Z9k">

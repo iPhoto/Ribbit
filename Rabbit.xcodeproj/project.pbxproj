@@ -28,6 +28,11 @@
 		393E725D190CCC8300A76C44 /* NSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393E725C190CCC8300A76C44 /* NSignupViewController.m */; };
 		394B0A8D191A7C9300322B19 /* NEditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 394B0A8C191A7C9300322B19 /* NEditFriendsViewController.m */; };
 		39A21CBA191BAEAA00B6FCAA /* NCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A21CB9191BAEAA00B6FCAA /* NCameraViewController.m */; };
+		39A21CBF191BE60000B6FCAA /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A21CBB191BE60000B6FCAA /* icon_image.png */; };
+		39A21CC0191BE60000B6FCAA /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A21CBC191BE60000B6FCAA /* icon_image@2x.png */; };
+		39A21CC1191BE60000B6FCAA /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A21CBD191BE60000B6FCAA /* icon_video.png */; };
+		39A21CC2191BE60000B6FCAA /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A21CBE191BE60000B6FCAA /* icon_video@2x.png */; };
+		39A21CC5191BEE4300B6FCAA /* NImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A21CC4191BEE4300B6FCAA /* NImageViewController.m */; };
 		39E6C12C190CB01400D9AF2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E6C12B190CB01400D9AF2A /* Foundation.framework */; };
 		39E6C12E190CB01400D9AF2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E6C12D190CB01400D9AF2A /* CoreGraphics.framework */; };
 		39E6C130190CB01400D9AF2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E6C12F190CB01400D9AF2A /* UIKit.framework */; };
@@ -81,6 +86,12 @@
 		394B0A8C191A7C9300322B19 /* NEditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NEditFriendsViewController.m; path = ../NEditFriendsViewController.m; sourceTree = "<group>"; };
 		39A21CB8191BAEAA00B6FCAA /* NCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCameraViewController.h; sourceTree = "<group>"; };
 		39A21CB9191BAEAA00B6FCAA /* NCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCameraViewController.m; sourceTree = "<group>"; };
+		39A21CBB191BE60000B6FCAA /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_image.png; sourceTree = "<group>"; };
+		39A21CBC191BE60000B6FCAA /* icon_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_image@2x.png"; sourceTree = "<group>"; };
+		39A21CBD191BE60000B6FCAA /* icon_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_video.png; sourceTree = "<group>"; };
+		39A21CBE191BE60000B6FCAA /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_video@2x.png"; sourceTree = "<group>"; };
+		39A21CC3191BEE4300B6FCAA /* NImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NImageViewController.h; path = ../NImageViewController.h; sourceTree = "<group>"; };
+		39A21CC4191BEE4300B6FCAA /* NImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NImageViewController.m; path = ../NImageViewController.m; sourceTree = "<group>"; };
 		39E6C128190CB01400D9AF2A /* Rabbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rabbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E6C12B190CB01400D9AF2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		39E6C12D190CB01400D9AF2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +152,10 @@
 			children = (
 				393E722E190CB94E00A76C44 /* inbox@2x.png */,
 				393E722F190CB94E00A76C44 /* inbox.png */,
+				39A21CBB191BE60000B6FCAA /* icon_image.png */,
+				39A21CBC191BE60000B6FCAA /* icon_image@2x.png */,
+				39A21CBD191BE60000B6FCAA /* icon_video.png */,
+				39A21CBE191BE60000B6FCAA /* icon_video@2x.png */,
 				393E7230190CB94E00A76C44 /* friends@2x.png */,
 				393E7231190CB94E00A76C44 /* friends.png */,
 				393E7232190CB94E00A76C44 /* camera@2x.png */,
@@ -194,6 +209,8 @@
 		39E6C131190CB01400D9AF2A /* Rabbit */ = {
 			isa = PBXGroup;
 			children = (
+				39A21CC3191BEE4300B6FCAA /* NImageViewController.h */,
+				39A21CC4191BEE4300B6FCAA /* NImageViewController.m */,
 				39F0CF3F1911F7C200D9A7AA /* NFriendsViewController.h */,
 				39F0CF401911F7C200D9A7AA /* NFriendsViewController.m */,
 				394B0A8B191A7C9300322B19 /* NEditFriendsViewController.h */,
@@ -319,15 +336,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A21CC1191BE60000B6FCAA /* icon_video.png in Resources */,
 				393E7237190CB94E00A76C44 /* friends.png in Resources */,
 				39E6C15B190CB02700D9AF2A /* MainStoryboard.storyboard in Resources */,
+				39A21CBF191BE60000B6FCAA /* icon_image.png in Resources */,
 				393E7235190CB94E00A76C44 /* inbox.png in Resources */,
 				393E7238190CB94E00A76C44 /* camera@2x.png in Resources */,
 				393E7239190CB94E00A76C44 /* camera.png in Resources */,
 				393E7234190CB94E00A76C44 /* inbox@2x.png in Resources */,
+				39A21CC0191BE60000B6FCAA /* icon_image@2x.png in Resources */,
 				39E6C136190CB01400D9AF2A /* InfoPlist.strings in Resources */,
 				393E7236190CB94E00A76C44 /* friends@2x.png in Resources */,
 				39E6C13E190CB01400D9AF2A /* Images.xcassets in Resources */,
+				39A21CC2191BE60000B6FCAA /* icon_video@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +375,7 @@
 				39E6C13C190CB01400D9AF2A /* NAppDelegate.m in Sources */,
 				393E725A190CCC7100A76C44 /* NLoginViewController.m in Sources */,
 				394B0A8D191A7C9300322B19 /* NEditFriendsViewController.m in Sources */,
+				39A21CC5191BEE4300B6FCAA /* NImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
