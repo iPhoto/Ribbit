@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1051" y="100"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Camera View Controller - Recipients-->
         <scene sceneID="k7s-4f-S9t">
             <objects>
-                <tableViewController id="eGj-UZ-2tg" sceneMemberID="viewController">
+                <tableViewController id="eGj-UZ-2tg" customClass="NCameraViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FRE-pH-JGx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,18 @@
                             <outlet property="delegate" destination="eGj-UZ-2tg" id="KzU-ki-cj1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="rfQ-SW-yZ3"/>
+                    <navigationItem key="navigationItem" title="Recipients" id="rfQ-SW-yZ3">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="6HW-BM-Hni">
+                            <connections>
+                                <action selector="cancel:" destination="eGj-UZ-2tg" id="f7R-Ep-bnh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="uBn-OO-l0l">
+                            <connections>
+                                <action selector="send:" destination="eGj-UZ-2tg" id="wna-sn-geC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QxI-pl-2oo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
