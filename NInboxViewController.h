@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NInboxViewController : UITableViewController
+- (IBAction)logout:(id)sender;
 
 @end
