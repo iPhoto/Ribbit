@@ -26,7 +26,14 @@
     NSString *title =[NSString stringWithFormat:@"Send from %@", senderName];
     self.navigationItem.title = title;
 }
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(timeout) userInfo:nil repeats:NO];
 
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -43,5 +50,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark    - helper method
 
+
+- (void) timeout{
+
+
+    [self.navigationController popViewControllerAnimated:YES];
+
+
+
+
+}
 @end

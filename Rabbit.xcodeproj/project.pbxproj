@@ -33,6 +33,7 @@
 		39A21CC1191BE60000B6FCAA /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A21CBD191BE60000B6FCAA /* icon_video.png */; };
 		39A21CC2191BE60000B6FCAA /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A21CBE191BE60000B6FCAA /* icon_video@2x.png */; };
 		39A21CC5191BEE4300B6FCAA /* NImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A21CC4191BEE4300B6FCAA /* NImageViewController.m */; };
+		39A313361922D65100039981 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A313351922D65100039981 /* MediaPlayer.framework */; };
 		39E6C12C190CB01400D9AF2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E6C12B190CB01400D9AF2A /* Foundation.framework */; };
 		39E6C12E190CB01400D9AF2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E6C12D190CB01400D9AF2A /* CoreGraphics.framework */; };
 		39E6C130190CB01400D9AF2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E6C12F190CB01400D9AF2A /* UIKit.framework */; };
@@ -92,6 +93,7 @@
 		39A21CBE191BE60000B6FCAA /* icon_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_video@2x.png"; sourceTree = "<group>"; };
 		39A21CC3191BEE4300B6FCAA /* NImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NImageViewController.h; path = ../NImageViewController.h; sourceTree = "<group>"; };
 		39A21CC4191BEE4300B6FCAA /* NImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NImageViewController.m; path = ../NImageViewController.m; sourceTree = "<group>"; };
+		39A313351922D65100039981 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		39E6C128190CB01400D9AF2A /* Rabbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rabbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E6C12B190CB01400D9AF2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		39E6C12D190CB01400D9AF2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A313361922D65100039981 /* MediaPlayer.framework in Frameworks */,
 				393E7249190CC72A00A76C44 /* AudioToolbox.framework in Frameworks */,
 				393E724A190CC72A00A76C44 /* CFNetwork.framework in Frameworks */,
 				393E724B190CC72A00A76C44 /* CoreLocation.framework in Frameworks */,
@@ -188,6 +191,7 @@
 		39E6C12A190CB01400D9AF2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39A313351922D65100039981 /* MediaPlayer.framework */,
 				393E7240190CC72A00A76C44 /* AudioToolbox.framework */,
 				393E7241190CC72A00A76C44 /* CFNetwork.framework */,
 				393E7242190CC72A00A76C44 /* CoreLocation.framework */,
