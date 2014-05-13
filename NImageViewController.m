@@ -14,19 +14,17 @@
 
 @implementation NImageViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    PFFile *imageFile = [self.message objectForKey:@"file"];
+    NSURL *imageFileURL = [[NSURL alloc] initWithString:imageFile.url];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageFileURL];
+    self.imageView.image = [UIImage imageWithData:imageData];
+    NSString *senderName = [self.message objectForKey:@"senderName"];
+    NSString *title =[NSString stringWithFormat:@"Send from %@", senderName];
+    self.navigationItem.title = title;
 }
 
 - (void)didReceiveMemoryWarning

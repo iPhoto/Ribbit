@@ -160,37 +160,12 @@
                     </navigationItem>
                     <connections>
                         <segue destination="ZcG-9H-7ga" kind="push" identifier="showLogin" id="cIt-RU-4Mp"/>
-                        <segue destination="PR4-5x-UkO" kind="push" identifier="showImage" id="gla-m5-zFd"/>
+                        <segue destination="L2o-eY-ILf" kind="push" identifier="showImage" id="L3Y-CD-FbQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmK-gK-6x4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="583" y="-561"/>
-        </scene>
-        <!--Image View Controller-->
-        <scene sceneID="FMH-z5-cWf">
-            <objects>
-                <viewController id="PR4-5x-UkO" customClass="NImageViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Qit-7f-NyI"/>
-                        <viewControllerLayoutGuide type="bottom" id="4Ec-kv-mWl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TmZ-3X-XZw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kw4-C8-PAP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wyi-gd-t5i"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tbI-t1-hr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1023" y="-1297"/>
         </scene>
         <!--Login View Controller - Ribbit-->
         <scene sceneID="N45-4d-Z9k">
@@ -249,11 +224,65 @@
                     <connections>
                         <outlet property="passwordField" destination="nWs-HF-z3j" id="Aa1-k9-eiX"/>
                         <outlet property="usernameField" destination="Ikq-DO-BxD" id="j28-m1-fcE"/>
+                        <segue destination="q9t-NK-mDo" kind="push" identifier="showImage" id="iTb-np-itq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G22-k1-xiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1051" y="-555"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="YPD-fO-M7q">
+            <objects>
+                <viewController id="L2o-eY-ILf" customClass="NImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="woZ-TZ-DLa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Msd-J2-0ae"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g7y-Ol-guo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psg-yB-SWm">
+                                <rect key="frame" x="0.0" y="5" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="12K-WC-NZN"/>
+                    <connections>
+                        <outlet property="imageView" destination="psg-yB-SWm" id="3fq-BG-vdj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAb-Lb-qfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="-1225"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="tZ5-Fw-UNI">
+            <objects>
+                <viewController id="q9t-NK-mDo" customClass="NImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z3k-qc-fSX"/>
+                        <viewControllerLayoutGuide type="bottom" id="z0y-gT-WZt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Grk-cA-2qF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="meZ-pC-XDi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1ak-ao-yCG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLp-dG-b9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437" y="-1234"/>
         </scene>
         <!--Signup View Controller - Ribbit-->
         <scene sceneID="3SC-CL-uYn">

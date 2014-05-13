@@ -235,9 +235,9 @@
             [alertView show];
         }
         else{
-            PFObject *message = [PFObject objectWithClassName:@"Messages"];
+            PFObject *message = [PFObject objectWithClassName:@"messages"];
             [message setObject:file forKey:@"file"];
-            [message setObject:file forKey:@"fileType"];
+            [message setObject:fileType forKey:@"fileType"];
             [message setObject:self.recipients forKey:@"recipientIds"];
             [message setObject:[[PFUser currentUser] objectId] forKey:@"senderId"];
             [message setObject:[[PFUser currentUser] username] forKey:@"senderName"];

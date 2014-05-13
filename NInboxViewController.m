@@ -7,7 +7,7 @@
 //
 
 #import "NInboxViewController.h"
-#import <Parse/Parse.h>
+#import "NImageViewController.h"
 
 @interface NInboxViewController ()
 
@@ -34,7 +34,7 @@
 
     [super viewWillAppear:animated];
 
-    PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
+    PFQuery *query = [PFQuery queryWithClassName:@"messages"];
     [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -48,6 +48,9 @@
             NSLog(@"Retrieved %d messages", [self.messages count]);
         
         }
+        
+        NSLog(@"%@", self.messages);
+
     }];
 
 }
@@ -83,8 +86,8 @@
     PFObject *message = [self.messages objectAtIndex:indexPath.row];
     cell.textLabel.text = [message objectForKey:@"senderName"];
     
-    NSString * typeofFile= [message objectForKey:@"fileType"];
-    if ([@"image" isEqualToString:typeofFile])
+    NSString *fileType= [message objectForKey:@"fileType"];
+    if ([fileType.description isEqualToString:@"image"])
     {
         cell.imageView.image = [UIImage imageNamed:@"icon_image"];
         
@@ -97,22 +100,21 @@
     return cell;
 }
 
--(void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    PFObject *message = [self.messages objectAtIndex:indexPath.row];
-    NSString * typeofFile= [message objectForKey:@"fileType"];
     
-    if ([@"image" isEqualToString:typeofFile])
-    {
-        NSLog(@"Entered!");
+    self.selectedMessages = [self.messages objectAtIndex:indexPath.row];
+    NSString * fileType= [self.selectedMessages objectForKey:@"fileType"];
 
+    if ([fileType isEqualToString:@"image"])
+    {        
         [self performSegueWithIdentifier:@"showImage" sender:self];
     }
     else{
         
         
     }
+
 
 
 
@@ -132,7 +134,12 @@
     if ([segue.identifier isEqualToString:@"showLogin"]) {
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
     }
-
+    else if ([segue.identifier isEqualToString:@"showImage"]){
+    
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+        NImageViewController *imageViewController = (NImageViewController *) segue.destinationViewController;
+        imageViewController.message = self.selectedMessages;
+    }
 
 }
 @end
