@@ -22,6 +22,8 @@
 {
     [super viewDidLoad];
     self.moviePlayer = [[MPMoviePlayerController alloc] init];
+    
+    //Check current user login status. If no user login, show login page.
     PFUser *currentUser = [PFUser currentUser];
     if(currentUser){
         NSLog(@"Current user : %@", currentUser.username);

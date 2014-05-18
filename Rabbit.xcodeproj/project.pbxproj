@@ -27,6 +27,7 @@
 		393E725A190CCC7100A76C44 /* NLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393E7259190CCC7100A76C44 /* NLoginViewController.m */; };
 		393E725D190CCC8300A76C44 /* NSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393E725C190CCC8300A76C44 /* NSignupViewController.m */; };
 		394B0A8D191A7C9300322B19 /* NEditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 394B0A8C191A7C9300322B19 /* NEditFriendsViewController.m */; };
+		395C80D51928872E00749A78 /* NAdditionalInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 395C80D41928872E00749A78 /* NAdditionalInformationViewController.m */; };
 		39A21CBA191BAEAA00B6FCAA /* NCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A21CB9191BAEAA00B6FCAA /* NCameraViewController.m */; };
 		39A21CBF191BE60000B6FCAA /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A21CBB191BE60000B6FCAA /* icon_image.png */; };
 		39A21CC0191BE60000B6FCAA /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A21CBC191BE60000B6FCAA /* icon_image@2x.png */; };
@@ -85,6 +86,8 @@
 		393E725C190CCC8300A76C44 /* NSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSignupViewController.m; path = ../NSignupViewController.m; sourceTree = "<group>"; };
 		394B0A8B191A7C9300322B19 /* NEditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NEditFriendsViewController.h; path = ../NEditFriendsViewController.h; sourceTree = "<group>"; };
 		394B0A8C191A7C9300322B19 /* NEditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NEditFriendsViewController.m; path = ../NEditFriendsViewController.m; sourceTree = "<group>"; };
+		395C80D31928872E00749A78 /* NAdditionalInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAdditionalInformationViewController.h; path = ../NAdditionalInformationViewController.h; sourceTree = "<group>"; };
+		395C80D41928872E00749A78 /* NAdditionalInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAdditionalInformationViewController.m; path = ../NAdditionalInformationViewController.m; sourceTree = "<group>"; };
 		39A21CB8191BAEAA00B6FCAA /* NCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCameraViewController.h; sourceTree = "<group>"; };
 		39A21CB9191BAEAA00B6FCAA /* NCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCameraViewController.m; sourceTree = "<group>"; };
 		39A21CBB191BE60000B6FCAA /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_image.png; sourceTree = "<group>"; };
@@ -213,20 +216,22 @@
 		39E6C131190CB01400D9AF2A /* Rabbit */ = {
 			isa = PBXGroup;
 			children = (
-				39A21CC3191BEE4300B6FCAA /* NImageViewController.h */,
-				39A21CC4191BEE4300B6FCAA /* NImageViewController.m */,
-				39F0CF3F1911F7C200D9A7AA /* NFriendsViewController.h */,
-				39F0CF401911F7C200D9A7AA /* NFriendsViewController.m */,
-				394B0A8B191A7C9300322B19 /* NEditFriendsViewController.h */,
-				394B0A8C191A7C9300322B19 /* NEditFriendsViewController.m */,
-				39A21CB8191BAEAA00B6FCAA /* NCameraViewController.h */,
-				39A21CB9191BAEAA00B6FCAA /* NCameraViewController.m */,
+				393E725B190CCC8300A76C44 /* NSignupViewController.h */,
+				393E725C190CCC8300A76C44 /* NSignupViewController.m */,
 				393E7258190CCC7100A76C44 /* NLoginViewController.h */,
 				393E7259190CCC7100A76C44 /* NLoginViewController.m */,
-				393E725B190CCC8300A76C44 /* NSignupViewController.h */,
+				394B0A8B191A7C9300322B19 /* NEditFriendsViewController.h */,
+				394B0A8C191A7C9300322B19 /* NEditFriendsViewController.m */,
+				39F0CF3F1911F7C200D9A7AA /* NFriendsViewController.h */,
+				39F0CF401911F7C200D9A7AA /* NFriendsViewController.m */,
+				39A21CB8191BAEAA00B6FCAA /* NCameraViewController.h */,
+				39A21CB9191BAEAA00B6FCAA /* NCameraViewController.m */,
 				393E723B190CC07700A76C44 /* NInboxViewController.h */,
 				393E723C190CC07700A76C44 /* NInboxViewController.m */,
-				393E725C190CCC8300A76C44 /* NSignupViewController.m */,
+				39A21CC3191BEE4300B6FCAA /* NImageViewController.h */,
+				39A21CC4191BEE4300B6FCAA /* NImageViewController.m */,
+				395C80D31928872E00749A78 /* NAdditionalInformationViewController.h */,
+				395C80D41928872E00749A78 /* NAdditionalInformationViewController.m */,
 				39E6C13A190CB01400D9AF2A /* NAppDelegate.h */,
 				39E6C13B190CB01400D9AF2A /* NAppDelegate.m */,
 				39E6C13D190CB01400D9AF2A /* Images.xcassets */,
@@ -380,6 +385,7 @@
 				393E725A190CCC7100A76C44 /* NLoginViewController.m in Sources */,
 				394B0A8D191A7C9300322B19 /* NEditFriendsViewController.m in Sources */,
 				39A21CC5191BEE4300B6FCAA /* NImageViewController.m in Sources */,
+				395C80D51928872E00749A78 /* NAdditionalInformationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

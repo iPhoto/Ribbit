@@ -8,6 +8,7 @@
 
 #import "NFriendsViewController.h"
 #import "NEditFriendsViewController.h"
+#import "NAdditionalInformationViewController.h"
 @interface NFriendsViewController ()
 
 @end
@@ -54,6 +55,13 @@
     if ([segue.identifier isEqualToString:@"showEditFriends"]) {
         NEditFriendsViewController *viewController = (NEditFriendsViewController *)segue.destinationViewController;
         viewController.friends = [NSMutableArray arrayWithArray:self.friends];
+    }
+    else if( [segue.identifier isEqualToString:@"ShowAdditionalInformation"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NAdditionalInformationViewController *detailController = (NAdditionalInformationViewController *) segue.destinationViewController;
+        PFUser *user = [self.friends objectAtIndex:indexPath.row];
+        detailController.user = user;
     }
 
 

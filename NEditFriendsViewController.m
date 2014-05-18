@@ -79,14 +79,18 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
-
+    //Delete friends
     if ([self isFriend:user]) {
+        
+        //1. remove the checkmark
         cell.accessoryType = UITableViewCellAccessoryNone;
         
-        
+        //2. remove from the array of friends
         for (PFUser *friend in self.friends) {
             if ([friend.objectId isEqualToString:user.objectId]) {
           
@@ -95,10 +99,12 @@
             
             }
         }
+        //3. remove from backend
           [friendsRelation removeObject:user];
     }
   
     else
+        // Add new friend
 {
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     [self.friends addObject:user];
