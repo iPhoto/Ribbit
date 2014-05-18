@@ -20,8 +20,24 @@
     [super viewDidLoad];
     PFQuery *query = [PFQuery queryWithClassName:@"additionalInformation"];
     [query whereKey:@"user" equalTo:self.user];
-    NSArray *usersPosts = [query findObjects];
-    NSLog(@"%@", usersPosts);
+    
+   
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(error){
+            
+            NSLog(@"error %@ %@", error, [error userInfo]);
+            
+        }
+        else{
+            NSArray *usersDetails = [query findObjects];
+            NSLog(@"%@", usersDetails);
+            
+            
+        }
+    }];
+    
+    
+  
 }
 
 

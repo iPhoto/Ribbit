@@ -35,6 +35,7 @@
 		39A21CC2191BE60000B6FCAA /* icon_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39A21CBE191BE60000B6FCAA /* icon_video@2x.png */; };
 		39A21CC5191BEE4300B6FCAA /* NImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A21CC4191BEE4300B6FCAA /* NImageViewController.m */; };
 		39A313361922D65100039981 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A313351922D65100039981 /* MediaPlayer.framework */; };
+		39B8FEEF192894AF00F43014 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 39B8FEEE192894AF00F43014 /* Podfile */; };
 		39E6C12C190CB01400D9AF2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E6C12B190CB01400D9AF2A /* Foundation.framework */; };
 		39E6C12E190CB01400D9AF2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E6C12D190CB01400D9AF2A /* CoreGraphics.framework */; };
 		39E6C130190CB01400D9AF2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E6C12F190CB01400D9AF2A /* UIKit.framework */; };
@@ -97,6 +98,7 @@
 		39A21CC3191BEE4300B6FCAA /* NImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NImageViewController.h; path = ../NImageViewController.h; sourceTree = "<group>"; };
 		39A21CC4191BEE4300B6FCAA /* NImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NImageViewController.m; path = ../NImageViewController.m; sourceTree = "<group>"; };
 		39A313351922D65100039981 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		39B8FEEE192894AF00F43014 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		39E6C128190CB01400D9AF2A /* Rabbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rabbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E6C12B190CB01400D9AF2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		39E6C12D190CB01400D9AF2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,6 +175,7 @@
 		39E6C11F190CB01400D9AF2A = {
 			isa = PBXGroup;
 			children = (
+				39B8FEEE192894AF00F43014 /* Podfile */,
 				393E723A190CB98000A76C44 /* Images */,
 				39E6C15A190CB02700D9AF2A /* MainStoryboard.storyboard */,
 				39E6C131190CB01400D9AF2A /* Rabbit */,
@@ -226,10 +229,10 @@
 				39F0CF401911F7C200D9A7AA /* NFriendsViewController.m */,
 				39A21CB8191BAEAA00B6FCAA /* NCameraViewController.h */,
 				39A21CB9191BAEAA00B6FCAA /* NCameraViewController.m */,
-				393E723B190CC07700A76C44 /* NInboxViewController.h */,
-				393E723C190CC07700A76C44 /* NInboxViewController.m */,
 				39A21CC3191BEE4300B6FCAA /* NImageViewController.h */,
 				39A21CC4191BEE4300B6FCAA /* NImageViewController.m */,
+				393E723B190CC07700A76C44 /* NInboxViewController.h */,
+				393E723C190CC07700A76C44 /* NInboxViewController.m */,
 				395C80D31928872E00749A78 /* NAdditionalInformationViewController.h */,
 				395C80D41928872E00749A78 /* NAdditionalInformationViewController.m */,
 				39E6C13A190CB01400D9AF2A /* NAppDelegate.h */,
@@ -357,6 +360,7 @@
 				39E6C136190CB01400D9AF2A /* InfoPlist.strings in Resources */,
 				393E7236190CB94E00A76C44 /* friends@2x.png in Resources */,
 				39E6C13E190CB01400D9AF2A /* Images.xcassets in Resources */,
+				39B8FEEF192894AF00F43014 /* Podfile in Resources */,
 				39A21CC2191BE60000B6FCAA /* icon_video@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
