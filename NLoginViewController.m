@@ -34,7 +34,20 @@
                           [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *password = [self.passwordField.text stringByTrimmingCharactersInSet:
                           [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-
+    
+    //Add a activity indicator which indicating the login is under processing.
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleGray];
+    CGRect frame = activityIndicator.frame;
+    frame.origin.x = self.view.frame.size.width / 2 - frame.size.width / 2;
+    frame.origin.y = self.view.frame.size.height / 2 - frame.size.height / 2;
+    activityIndicator.frame = frame;
+    [self.view addSubview: activityIndicator];
+    [self.view bringSubviewToFront:activityIndicator];
+    activityIndicator.hidesWhenStopped = YES;
+    activityIndicator.hidden = NO;
+    [activityIndicator startAnimating];
+    
+    
     if([username length] == 0 || [password length] == 0){
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"oops!" message:@"Make sure you enter a username and password!" delegate:nil cancelButtonTitle:@"ok!" otherButtonTitles:nil];
         [alertView show];
@@ -49,10 +62,9 @@
                 [alertView show];
             }
             else{
-                
-                
+                //Login succeed, stop animating indicator.
+                [activityIndicator stopAnimating];
                 [self.navigationController popToRootViewControllerAnimated:YES];
-                
                 
                 
             }
