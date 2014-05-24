@@ -206,7 +206,7 @@
 
 - (void) uploadMessage{
 
-    //Check if image or video
+    // Check if image or video
     // If image, shrink it
     // Upload the file itself
     // Upload the message details

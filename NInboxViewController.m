@@ -30,9 +30,12 @@
         NSLog(@"Current user : %@", currentUser.username);
     
     }
-    else{
-    [self performSegueWithIdentifier:@"showLogin" sender:self];
+    else
+    {
+    
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
+    
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(retrieveMessages) forControlEvents:UIControlEventValueChanged];
 }
@@ -160,6 +163,7 @@
 }
 
 - (void)retrieveMessages {
+    
     PFQuery *query = [PFQuery queryWithClassName:@"messages"];
     [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
     [query orderByDescending:@"createdAt"];
@@ -171,7 +175,7 @@
             
             self.messages = objects;
             [self.tableView reloadData];
-            NSLog(@"Retrieved %d messages", [self.messages count]);
+       //     NSLog(@"Retrieved %d messages", [self.messages count]);
             
         }
         

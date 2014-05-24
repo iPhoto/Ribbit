@@ -60,16 +60,6 @@
     //Customize the tab bar
 
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
-    UITabBarController *tabBarController = (UITabBarController *) self.window.rootViewController;
-
-    UITabBar *tabBar = tabBarController.tabBar;
-    UITabBarItem *tabInbox = [tabBar.items objectAtIndex:0];
-    UITabBarItem *tabFriends = [tabBar.items objectAtIndex:1];
-    UITabBarItem *tabCamera = [tabBar.items objectAtIndex:2];
-    
-//    [tabInbox initWithTitle:@"Inbox" image:[UIImage imageNamed:@"inbox"] selectedImage:[UIImage imageNamed:@"inbox"]];
-//    [tabFriends initWithTitle:@"Friends" image:[UIImage imageNamed:@"friends"] selectedImage:[UIImage imageNamed:@"friends"]];
-//    [tabCamera initWithTitle:@"Camera" image:[UIImage imageNamed:@"camera"] selectedImage:[UIImage imageNamed:@"camera"]];
 
 }
 @end
