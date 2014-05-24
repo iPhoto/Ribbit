@@ -8,6 +8,7 @@
 
 #import "NInboxViewController.h"
 #import "NImageViewController.h"
+#import "MSCellAccessory.h"
 
 
 @interface NInboxViewController ()
@@ -32,29 +33,16 @@
     else{
     [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(retrieveMessages) forControlEvents:UIControlEventValueChanged];
 }
+
+
 - (void) viewWillAppear:(BOOL)animated{
 
     [super viewWillAppear:animated];
-
-    PFQuery *query = [PFQuery queryWithClassName:@"messages"];
-    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
-    [query orderByDescending:@"createdAt"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (error) {
-            NSLog(@"Error: %@ %@ ", error, [error userInfo]);
-        }
-        else{
-        
-            self.messages = objects;
-            [self.tableView reloadData];
-            NSLog(@"Retrieved %d messages", [self.messages count]);
-        
-        }
-        
-        NSLog(@"%@", self.messages);
-
-    }];
+    [self.navigationController.navigationBar setHidden:NO];
+    [self retrieveMessages];
 
 }
 
@@ -88,6 +76,9 @@
     // Configure the cell...
     PFObject *message = [self.messages objectAtIndex:indexPath.row];
     cell.textLabel.text = [message objectForKey:@"senderName"];
+    
+    UIColor *disclosureColor = [UIColor colorWithRed:0.553 green:0.439 blue:0.718 alpha:1.0];
+    cell.accessoryView = [MSCellAccessory accessoryWithType:FLAT_DISCLOSURE_INDICATOR color:disclosureColor];
     
     NSString *fileType= [message objectForKey:@"fileType"];
     if ([fileType.description isEqualToString:@"image"])
@@ -167,4 +158,28 @@
     }
 
 }
+
+- (void)retrieveMessages {
+    PFQuery *query = [PFQuery queryWithClassName:@"messages"];
+    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
+    [query orderByDescending:@"createdAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@ %@ ", error, [error userInfo]);
+        }
+        else{
+            
+            self.messages = objects;
+            [self.tableView reloadData];
+            NSLog(@"Retrieved %d messages", [self.messages count]);
+            
+        }
+        
+        if ([self.refreshControl isRefreshing]) {
+            [self.refreshControl endRefreshing];
+        }
+    }];
+}
+
+
 @end

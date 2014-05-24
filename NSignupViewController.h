@@ -10,6 +10,7 @@
 
 @interface NSignupViewController : UIViewController
 
+- (IBAction)dismiss:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
